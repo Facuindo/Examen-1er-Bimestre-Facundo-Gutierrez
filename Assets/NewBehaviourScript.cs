@@ -19,20 +19,22 @@ public class NewBehaviourScript : MonoBehaviour
         }
         int Tiempo = Distancia / 25;
         int PrecioTotal;
+        int Precio;
         int DistanciaExtra = (Distancia % 25);
+        Precio = DistanciaExtra * 120;
         if (Peso < 2000)
         {
-            PrecioTotal = Tiempo * 3000;
+            PrecioTotal = Tiempo * 3000 + Precio;
             Debug.Log("Se necesita un Utilitario y va a salir " + PrecioTotal + " dolares");
         }
         if (Peso < 5000 && Peso > 2000)
         {
-            PrecioTotal = Tiempo * 4500;
+            PrecioTotal = Tiempo * 4500 + Precio;
             Debug.Log("Se necesita una Pickup y va a salir " + PrecioTotal + " dolares");
         }
         else if (Peso < 10000 && Peso > 5000)
         {
-            PrecioTotal = Tiempo * 7000;
+            PrecioTotal = Tiempo * 7000 + Precio;
             Debug.Log("Se necesita un Camion y va a salir " + PrecioTotal + " dolares");
         }
 
